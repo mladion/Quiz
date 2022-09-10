@@ -11,15 +11,14 @@ namespace Quiz
         public MainWindow()
         {
             InitializeComponent();
-            //btnNext.Visibility = Visibility.Collapsed;
         }
         private void EasyView_Clicked(object sender, RoutedEventArgs e)
         {
             //btnEasy.IsEnabled = false;
             //btnMedium.IsEnabled = false;
             //btnHard.IsEnabled = false;
-            DataModelHelper.InitData(QuestionType.EasyQuestion);
-            SetDataContext();
+            //DataModelHelper.InitData(QuestionType.EasyQuestion);
+            //SetDataContext();
             //btnNext.Visibility = Visibility.Visible;
         }
 

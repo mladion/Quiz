@@ -7,6 +7,10 @@
         xmlns:viewmodels="clr-namespace:Quiz.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="739" Width="831">
+    
+    <Window.DataContext>
+        <viewmodels:MainWindowViewModel/>
+    </Window.DataContext>
 
     <Window.Resources>
         <DataTemplate x:Name="singleChoiceViewTemplate" DataType="{x:Type viewmodels:SingleChoiceViewModel}">
@@ -72,7 +76,7 @@
                    Margin="5,8,5,8"/>
 
         <TextBox x:Name="txtName"
-                 Text="Mladinoi Ion"
+                 Text="{Binding Name}"
                  Grid.Row="2"
                  Grid.ColumnSpan="2"
                  VerticalContentAlignment="Center"
@@ -81,11 +85,11 @@
         <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,8,36,8" HorizontalAlignment="Center">
             <Button x:Name="btnEasy"
                     Content="Easy"
+                    Command="{Binding ButtonEasy}"
                     FontWeight="Bold"
                     Width="240"
                     Margin="5,8,5,8" 
-                    HorizontalAlignment="Left"
-                    Click="EasyView_Clicked"/>
+                    HorizontalAlignment="Left"/>
 
             <Button x:Name="btnMedium"
                     Content="Medium"
